@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM php:7.2-apache-jessie
+FROM php:7.2-apache
 
 # Let's install Git and Zip (for Composer)
 RUN apt-get -y update && apt-get install -y zlib1g-dev git
