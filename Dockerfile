@@ -8,6 +8,7 @@ FROM php:7.2-apache
 
 # Let's install Git and Zip (for Composer)
 RUN apt-get -y update && apt-get install -y zlib1g-dev git
+RUN apt-get install -my wget gnupg
 RUN docker-php-ext-install opcache mbstring zip
 
 # Let's install composer
