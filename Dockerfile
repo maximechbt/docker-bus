@@ -18,7 +18,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 RUN apt-get install apt-transport-https
-RUN apt-get update && apt-get install yarn
+RUN apt-get update && apt-get install yarn -y
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer &&\
     chmod +x /usr/local/bin/composer
 
